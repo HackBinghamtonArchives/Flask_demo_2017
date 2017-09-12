@@ -1,5 +1,13 @@
+<style media="screen">
+  .checked_in {
+    background-color: green;
+    color: white;
+  }
+</style>
+
+<h2>Members</h2>
 <ul>
   {% for member in members %}
-  <li>{{member.name}}</li>
+  <li {%if member.checked_in%}class='checked_in'{%endif%}>{{member.name}}</li>
   {% endfor%}
 </ul>
